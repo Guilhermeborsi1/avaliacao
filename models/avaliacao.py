@@ -4,7 +4,7 @@ from odoo.exceptions import ValidationError
 class Avaliacao(models.Model):
     _name = "avaliacao.avaliacao"
     _description = "Avaliação de Desempenho"
-
+    imagem_1920 = fields.Image(string="Imagem") 
     name = fields.Char(string = "Nome da peça" , required=True)
     code = fields.Char(string = "Código da peça" , required=True)
     description = fields.Text(string = "Descrição da peça")
