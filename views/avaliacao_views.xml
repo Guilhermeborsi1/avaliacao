@@ -9,7 +9,9 @@
             <list>
                 <field name="name"/>
                 <field name="description"/>
+                <field name="code"/>
                 <field name="score_total"/>
+                <field name="aproved"/>
             </list>
         </field>
     </record>
