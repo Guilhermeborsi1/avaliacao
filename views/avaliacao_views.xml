@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- LIST VIEW -->
+    <record id="view_avaliacao_list" model="ir.ui.view">
+        <field name="name">avaliacao.avaliacao.list</field>
+        <field name="model">avaliacao.avaliacao</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="score_total"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_avaliacao_form" model="ir.ui.view">
+        <field name="name">avaliacao.avaliacao.form</field>
+        <field name="model">avaliacao.avaliacao</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <h2>
+                        </h2>
+                    </div>
+
+                    <group>
+                        <field name="code"/>
+                        <field name="description"/>
+                        <field name="evaluation_criteria"/>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Pontuações">
+                            <group>
+                                <field name="resistance_score"/>
+                                <field name="durability_score"/>
+                                <field name="termal_resistance_score"/>
+                                <field name="fatigue_resistance_score"/>
+                                <field name="misuse_resistance_score"/>
+                            </group>
+                        </page>
+
+                        <page string="Resultado">
+                            <group>
+                                <field name="score_total" widget="progressbar"/>
+                                <field name="aproved" widget="boolean_toggle"/>
+                            </group>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="action_avaliacao" model="ir.actions.act_window">
+        <field name="name">Avaliações</field>
+        <field name="res_model">avaliacao.avaliacao</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- MENUS -->
+    <menuitem id="menu_avaliacao_root" name="Avaliação"/>
+    <menuitem id="menu_avaliacao_items"
+              name="Avaliações"
+              parent="menu_avaliacao_root"
+              action="action_avaliacao"/>
+
+</odoo>

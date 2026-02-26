@@ -1,0 +1,6 @@
+*.pyc
+__pycache__/
+*.log
+.DS_Store
+.vscode/
+space_fleet/static/description/c5c0346c-1bb5-45d0-84b7-2fa307ecdf7c.png
