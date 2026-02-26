@@ -14,6 +14,8 @@ class Avaliacao(models.Model):
     termal_resistance_score = fields.Float(string = "Ponto por Resistência Térmica" , required=True)
     fatigue_resistance_score = fields.Float(string = "Ponto por Resistência à Fadiga" , required=True)
     misuse_resistance_score = fields.Float(string = "Ponto por Resistência ao Uso Indevido" , required=True)
+    contract = fields.Binary(string = "Contrato", required=True)
+    report = fields.Binary(string = "Relatório", required=True)
     score_total = fields.Float(
         string="Pontuação Final",
         compute="_compute_score",

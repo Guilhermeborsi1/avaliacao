@@ -45,13 +45,15 @@
                                 <field name="termal_resistance_score"/>
                                 <field name="fatigue_resistance_score"/>
                                 <field name="misuse_resistance_score"/>
+                                <field name="score_total" widget="progressbar"/>
+                                <field name="aproved" widget="boolean_toggle"/>
                             </group>
                         </page>
 
-                        <page string="Resultado">
+                        <page string="Arquivos">
                             <group>
-                                <field name="score_total" widget="progressbar"/>
-                                <field name="aproved" widget="boolean_toggle"/>
+                                <field name="contract" widget="binary"/>
+                                <field name="report" widget="binary"/>
                             </group>
                         </page>
 
