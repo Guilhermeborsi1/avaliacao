@@ -35,6 +35,8 @@
 
                     <group>
                         <field name= "date_avaliation"/>
+                        <field name="partner_id"/>
+                        <field name="user_id"/>
                         <field name="code"/>
                         <field name="description"/>
                         <field name="evaluation_criteria"/>

@@ -29,6 +29,24 @@ class Avaliacao(models.Model):
         store=True,
     )
 
+    # Contato (tabela de contatos)
+    partner_id = fields.Many2one(
+        comodel_name="res.partner",
+        string="Contato avaliado",
+        ondelete="set null",
+        index=True,
+    )
+
+    # Usuário (tabela de usuários)
+    user_id = fields.Many2one(
+        comodel_name="res.users",
+        string="Responsável (Usuário)",
+        ondelete="set null",
+        index=True,
+        domain=[("share", "=", False)],
+        default=lambda self: self.env.user,   # opcional: já preencher com usuário logado
+    )
+
     
     @api.depends(
         "resistance_score",
