@@ -47,7 +47,7 @@ class Avaliacao(models.Model):
         default=lambda self: self.env.user,   # opcional: já preencher com usuário logado
     )
 
-    
+    # Computa a pontuação total e define se a peça foi aprovada ou não
     @api.depends(
         "resistance_score",
         "durability_score",
