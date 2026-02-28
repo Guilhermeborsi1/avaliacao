@@ -37,6 +37,7 @@
                         <field name="code"/>
                         <field name="description"/>
                         <field name="evaluation_criteria"/>
+                        <field name= "date_avaliation"/>
                     </group>
 
                     <notebook>

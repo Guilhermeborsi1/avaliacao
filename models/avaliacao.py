@@ -16,6 +16,7 @@ class Avaliacao(models.Model):
     misuse_resistance_score = fields.Float(string = "Ponto por Resistência ao Uso Indevido" , required=True)
     contract = fields.Binary(string = "Contrato", required=True)
     report = fields.Binary(string = "Relatório", required=True)
+    date_avaliation = fields.Date(string = "Data da Avaliação", required=True)
     score_total = fields.Float(
         string="Pontuação Final",
         compute="_compute_score",
