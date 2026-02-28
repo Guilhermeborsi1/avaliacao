@@ -32,7 +32,7 @@ class Avaliacao(models.Model):
     # Contato (tabela de contatos)
     partner_id = fields.Many2one(
         comodel_name="res.partner",
-        string="Contato avaliado",
+        string="Cliente",
         ondelete="set null",
         index=True,
     )
@@ -40,7 +40,7 @@ class Avaliacao(models.Model):
     # Usuário (tabela de usuários)
     user_id = fields.Many2one(
         comodel_name="res.users",
-        string="Responsável (Usuário)",
+        string="Responsável tecnico",
         ondelete="set null",
         index=True,
         domain=[("share", "=", False)],
