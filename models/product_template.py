@@ -28,3 +28,8 @@ class ProductTemplate(models.Model):
         string="Ponto por Resistência ao Uso Indevido",
         readonly=True,
         default=0.0)    
+    x_score_total = fields.Float(
+        string="Score Total",
+        readonly=True,
+        default=0.0,)
+    

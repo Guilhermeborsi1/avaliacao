@@ -12,6 +12,7 @@
                         <field name="x_ponto_por_resistencia_termica"/>
                         <field name="x_ponto_por_resistencia_e_fadiga"/>
                         <field name="x_ponto_por_resistencia_ao_uso_indevido"/>
+                        <field name="x_score_total"/>
                         <field name="x_aprovado_avaliacao"/>
                     </group>
                 </page>

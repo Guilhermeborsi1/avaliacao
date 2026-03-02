@@ -93,6 +93,7 @@ class Avaliacao(models.Model):
                 rec.product_tmpl_id.x_ponto_por_resistencia_termica = rec.termal_resistance_score
                 rec.product_tmpl_id.x_ponto_por_resistencia_e_fadiga = rec.fatigue_resistance_score
                 rec.product_tmpl_id.x_ponto_por_resistencia_ao_uso_indevido = rec.misuse_resistance_score
+                rec.product_tmpl_id.x_score_total = rec.score_total
 
     @api.model
     def create(self, vals):
