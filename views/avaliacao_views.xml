@@ -40,6 +40,7 @@
                         <field name="code"/>
                         <field name="description"/>
                         <field name="evaluation_criteria"/>
+                        <field name="product_tmpl_id"/>
                     </group>
 
                     <notebook>
