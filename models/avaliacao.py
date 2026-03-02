@@ -87,6 +87,7 @@ class Avaliacao(models.Model):
         """Empurra o status atual de aprovado para o produto vinculado."""
         for rec in self:
             if rec.product_tmpl_id:
+                rec.product_tmpl_id.image_1920 = rec.imagem_1920
                 rec.product_tmpl_id.x_aprovado_avaliacao = rec.aproved
                 rec.product_tmpl_id.x_ponto_por_resistencia = rec.resistance_score
                 rec.product_tmpl_id.x_ponto_por_durabilidade = rec.durability_score
