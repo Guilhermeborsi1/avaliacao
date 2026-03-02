@@ -25,7 +25,7 @@ class Avaliacao(models.Model):
     product_tmpl_id = fields.Many2one(
         comodel_name="product.template",
         string="Produto",
-        required=True,
+        required=False,
         ondelete="cascade",
         index=True,
     )
@@ -88,6 +88,11 @@ class Avaliacao(models.Model):
         for rec in self:
             if rec.product_tmpl_id:
                 rec.product_tmpl_id.x_aprovado_avaliacao = rec.aproved
+                rec.product_tmpl_id.x_ponto_por_resistencia = rec.resistance_score
+                rec.product_tmpl_id.x_ponto_por_durabilidade = rec.durability_score
+                rec.product_tmpl_id.x_ponto_por_resistencia_termica = rec.termal_resistance_score
+                rec.product_tmpl_id.x_ponto_por_resistencia_e_fadiga = rec.fatigue_resistance_score
+                rec.product_tmpl_id.x_ponto_por_resistencia_ao_uso_indevido = rec.misuse_resistance_score
 
     @api.model
     def create(self, vals):

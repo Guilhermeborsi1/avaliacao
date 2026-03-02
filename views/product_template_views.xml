@@ -7,6 +7,11 @@
             <xpath expr="//sheet/notebook" position="inside">
                 <page string="Avaliação">
                     <group>
+                        <field name="x_ponto_por_resistencia"/>
+                        <field name="x_ponto_por_durabilidade"/>
+                        <field name="x_ponto_por_resistencia_termica"/>
+                        <field name="x_ponto_por_resistencia_e_fadiga"/>
+                        <field name="x_ponto_por_resistencia_ao_uso_indevido"/>
                         <field name="x_aprovado_avaliacao"/>
                     </group>
                 </page>
